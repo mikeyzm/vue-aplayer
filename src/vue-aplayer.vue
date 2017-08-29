@@ -102,7 +102,10 @@
             player.on('error', () => {
                 this.$emit('error')
             })
-        }
+        },
+        beforeDestroy() {
+            this.control.destroy();
+        },
     }
 
 
